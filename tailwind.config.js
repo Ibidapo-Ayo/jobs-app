@@ -9,9 +9,10 @@ module.exports = {
         textColor: "#95969D",
         secondary: {
           DEFAULT: "#F2F2F3",
+          orange: "#FF9228"
         },
         primary: {
-          DEFAULT: "#16A34A",
+          DEFAULT: "#0D0140",
           100: "#22C55E",
         },
       },

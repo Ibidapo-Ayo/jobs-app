@@ -39,7 +39,7 @@ const FeaturedJob = () => {
                     ref={flatListRef}
                 />
 
-                <TouchableOpacity className='w-12 h-12 rounded-full bg-primary flex justify-center' style={[styles.icons, styles.left]}
+                <TouchableOpacity className='w-12 h-12 rounded-full bg-primary flex justify-center disabled:opacity-10' style={[styles.icons, styles.left]}
                     onPress={handlePrev}
                     disabled={activeIndex === 0}
                 >
@@ -60,12 +60,12 @@ export default FeaturedJob
 
 const styles = StyleSheet.create({
     flatListStyle: {
-        height: "100%",
+        height: 150,
         position: "relative"
     },
     icons: {
         position: "absolute",
-        top: "50%",
+        top: 55,
     },
     left: {
         left: 10
