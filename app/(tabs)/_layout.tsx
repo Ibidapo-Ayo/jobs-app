@@ -3,6 +3,7 @@ import React from 'react'
 import { Link, Tabs } from 'expo-router'
 import Feather from '@expo/vector-icons/Feather';
 import { Colors } from '@/constants/Colors';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 
 const TabsLayout = () => {
     return (
@@ -74,11 +75,11 @@ const TabsLayout = () => {
             />
 
             <Tabs.Screen
-                name='bookmarks'
+                name='chats'
 
                 options={{
                     tabBarIcon: ({ color, focused }) => {
-                        return <Feather name='bookmark' size={24} className='mt-1' color={color} />
+                        return <FontAwesome6 name="message" size={24} color={color} />
                     },
                     title: ''
                 }}

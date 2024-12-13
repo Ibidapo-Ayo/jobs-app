@@ -1,9 +1,7 @@
-export type PopularServicesItemsProps = {
+export type jobProps = {
     title: string,
-    image: string,
-    style: {
-      bg: string,
-      text: string,
-    },
-    category: string
+    logo: string,
+    tags?: [string, string],
+    description: string,
+    price: string
   }

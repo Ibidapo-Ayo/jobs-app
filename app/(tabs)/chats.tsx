@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Bookmarks = () => {
+const Chats = () => {
   return (
     <View>
-      <Text>Bookmarks</Text>
+      <Text>Chats</Text>
     </View>
   )
 }
 
-export default Bookmarks
+export default Chats

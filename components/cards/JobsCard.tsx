@@ -3,6 +3,7 @@ import React from 'react'
 import Feather from '@expo/vector-icons/Feather'
 import { Colors } from '@/constants/Colors'
 import GoogleLogo from "../../assets/images/google_logo.png"
+import { Link } from 'expo-router'
 
 type JobsCardProps = {
     title: string,
@@ -16,9 +17,9 @@ const JobsCard = ({ title, description, price, tags, logo }: JobsCardProps) => {
     return (
         <View style={styles.cardContainer}>
             <View style={styles.header}>
-                <View style={{
+              <Link href={"/job/job-details"} style={{
                     flex: 10
-                }}>
+              }}>
                     <View style={{
                         flex: 1,
                         flexDirection: "row",
@@ -39,7 +40,7 @@ const JobsCard = ({ title, description, price, tags, logo }: JobsCardProps) => {
                             <Text>{description}</Text>
                         </View>
                     </View>
-                </View>
+                </Link>
                 <View style={{
                     flex: 1
                 }}>
@@ -65,13 +66,19 @@ const JobsCard = ({ title, description, price, tags, logo }: JobsCardProps) => {
                         }}
                             key={index}
                         >
-                            <Text>{tag}</Text>
+                            <Text
+                            style={{
+                                fontSize: 12
+                            }}
+                            >{tag}</Text>
                         </View>
                     ))}
 
                     <TouchableOpacity style={styles.applyBtn}><Text style={{
                         color: "white",
-                        textAlign: "center"
+                        textAlign: "center",
+                        fontWeight: "700",
+                        fontSize: 16
                     }}>Apply</Text></TouchableOpacity>
                 </View>
             </View>

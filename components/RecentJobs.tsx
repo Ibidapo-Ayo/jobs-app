@@ -2,6 +2,7 @@ import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import { Colors } from '@/constants/Colors'
 import JobsCard from './cards/JobsCard'
+import { jobs } from '@/constants/Data'
 
 const RecentJobs = () => {
   return (
@@ -12,34 +13,17 @@ const RecentJobs = () => {
         marginTop: 10
       }}>
 
-        <JobsCard
-          title='Product Designer'
-          description='Google Inc. Califonia'
-          price='15K'
-          logo='Logo'
-          tags={["Senior designer", "Full time"]}
-        />
-        <JobsCard
-          title='Product Designer'
-          description='Google Inc. Califonia'
-          price='15K'
-          logo='Logo'
-          tags={["Senior designer", "Full time"]}
-        />
-        <JobsCard
-          title='Product Designer'
-          description='Google Inc. Califonia'
-          price='15K'
-          logo='Logo'
-          tags={["Senior designer", "Full time"]}
-        />
-        <JobsCard
-          title='Product Designer'
-          description='Google Inc. Califonia'
-          price='15K'
-          logo='Logo'
-          tags={["Senior designer", "Full time"]}
-        />
+
+        {jobs.map((job, index) => (
+          <JobsCard
+            title={job.title}
+            description={job.description}
+            price={job.price}
+            logo='Logo'
+            tags={job.tags}
+            key={index}
+          />
+        ))}
       </View>
     </View>
   )
