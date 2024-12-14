@@ -25,12 +25,13 @@ export const Colors = {
   },
 
   primary: {
-    DEFAULT: "#0D0140",
+    DEFAULT: "#130160",
     100: "#D6CDFE"
   },
   secondary: {
     DEFAULT: "#FF9228",
     100: "#95969D",
-    200: "#F3F2F2"
+    200: "#F3F2F2",
+    300: "#AAA6B9"
   }
 };
