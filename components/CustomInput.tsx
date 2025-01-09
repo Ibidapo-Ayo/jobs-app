@@ -19,7 +19,8 @@ const CustomInput = ({ label, placeholder, type, value, onChange }: CustomInputP
     }
     return (
         <View style={styles.containerStyle}>
-            {label && <View><Text style={styles.label}>{label}</Text></View>}
+            {label && <View>
+                <Text style={styles.label}>{label}</Text></View>}
             <TextInput placeholder={placeholder} style={styles.input}
                 value={value}
                 onChangeText={onChange}
